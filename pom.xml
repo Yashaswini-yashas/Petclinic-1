@@ -10,7 +10,7 @@
     <packaging>war</packaging>
 
     <properties>
-
+        
         <!-- Generic properties -->
         <java.version>1.7</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -42,6 +42,13 @@
         <cobertura.version>2.7</cobertura.version>
 
     </properties>
+
+<distributionManagement>
+   <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://52.11.18.25:8080/nexus-latest/content/repositories/Deploy/</url>
+   </snapshotRepository>
+</distributionManagement>
 
     <dependencyManagement>
         <!-- Import the maven Spring IO Platform Bill Of Materials (BOM) -->
