@@ -46,7 +46,7 @@
 <distributionManagement>
    <snapshotRepository>
       <id>nexus-snapshots</id>
-      <url>http://52.40.158.205:8080/nexus-latest/content/repositories/petclinicrepo/</url>
+      <url>http://localhost:8080/nexus-latest/content/repositories/petclinicrepo/</url>
    </snapshotRepository>
 </distributionManagement>
 
