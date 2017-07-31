@@ -15,7 +15,7 @@
 
 <div class="container-fluid">
     <div class="container xd-container">
-        <h2><fmt:message key="welcome to Pet Clinic!"/></h2>
+        <h2><fmt:message key="welcome to Pet Clinic"/></h2>
         <div class="row">
             <div class="col-md-12">
                 <spring:url value="/resources/images/pets1.png" htmlEscape="true" var="petsImage"/>
