@@ -13,7 +13,7 @@
 <jsp:include page="../fragments/htmlHeader.jsp"/>
 
 <body>
-<petclinic:bodyHeader menuName="owners"/>
+<petclinic:bodyHeader menuName="owners"/>	
 <div class="container-fluid">
     <div class="container xd-container">
 
@@ -22,7 +22,7 @@
 
         <table class="table table-striped">
             <tr>
-                <th>Name</th>
+                <th>Name!</th>
                 <td><b><c:out value="${owner.firstName} ${owner.lastName}"/></b></td>
             </tr>
             <tr>
