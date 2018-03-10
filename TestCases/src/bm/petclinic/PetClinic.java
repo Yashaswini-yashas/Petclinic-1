@@ -20,7 +20,7 @@ public class PetClinic {
 		driver=new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
-		driver.get("https://s3-us-west-2.amazonaws.com/java-demo-bucket/elb-petclinic-dns.txt ");
+		driver.get("https://s3-us-west-2.amazonaws.com/java-demo-bucket/elb-petclinic-dns.txt");
 		String url=driver.findElement(By.xpath("//body")).getText();
 		driver.get(url);
 		
