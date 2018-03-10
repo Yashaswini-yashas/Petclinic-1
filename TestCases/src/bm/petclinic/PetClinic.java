@@ -18,6 +18,7 @@ public class PetClinic {
 		//System.setProperty("webdriver.chrome.driver", "D:\\Users\\maudas\\Downloads\\chromedriver_win32 (4)\\chromedriver.exe");
 		//driver=new ChromeDriver();
 		driver=new FirefoxDriver();
+        System.out.println("browser is initiated");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(300, TimeUnit.SECONDS);
 		driver.get("https://s3-us-west-2.amazonaws.com/java-demo-bucket/elb-petclinic-dns.txt");
