@@ -1,5 +1,5 @@
 package bm.petclinic;
-
+import org.openqa.selenium.WebElement;
 import java.util.concurrent.TimeUnit;
 import java.util.List;
 import org.openqa.selenium.By;
