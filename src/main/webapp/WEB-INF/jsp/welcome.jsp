@@ -16,7 +16,7 @@
 <div class="container-fluid">
     <div class="container xd-container">
 
-        <h2>Welcome --- petclinic1 repo for cast -- pull request check</h2>
+        <h2>Welcome --- petclinic1 repo for cast -- jenkins build</h2>
 
         <div class="row">
             <div class="col-md-12">
