@@ -15,7 +15,7 @@
 
 <div class="container-fluid">
     <div class="container xd-container">
-        <h2>Welcome --- petclinic1 repo for cast -- trigger build in jenkins</h2>
+        <h2>Welcome --- petclinic1 repo for cast -- trigger build new</h2>
         <div class="row">
             <div class="col-md-12">
                 <spring:url value="/resources/images/pets.png" htmlEscape="true" var="petsImage"/>
