@@ -1,3 +1,4 @@
+# Maven
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
@@ -19,8 +20,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    
-  
+
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(system.defaultworkingdirectory)'
@@ -32,3 +32,22 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Pay-as-you-go(84e136a9-eff1-45e4-921e-74b64e473f40)'
+    scriptType: 'pscore'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      az group create --name petclinic-rg --location westus2
+      az appservice plan create --name petclinicPlan --resource-group petclinic-rg --sku FREE
+      az webapp create --name petclinic-webapplication --resource-group petclinic-rg --plan petclinicPlan
+      az webapp config set --name petclinic-webapplication --resource-group petclinic-rg --java-version 1.8 --java-container Tomcat --java-container-version 8.0
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Pay-as-you-go(84e136a9-eff1-45e4-921e-74b64e473f40)'
+    appType: 'webApp'
+    WebAppName: 'petclinic-webapplication'
+    packageForLinux: '$(build.artifactstagingdirectory)/**/*.war'
