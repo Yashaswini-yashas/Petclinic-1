@@ -35,7 +35,7 @@ steps:
 
 - task: AzureCLI@2
   inputs:
-    azureSubscription: 'Pay-as-you-go(84e136a9-eff1-45e4-921e-74b64e473f40)'
+    azureSubscription: 'java-app'
     scriptType: 'pscore'
     scriptLocation: 'inlineScript'
     inlineScript: |
@@ -47,7 +47,7 @@ steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
-    azureSubscription: 'Pay-as-you-go(84e136a9-eff1-45e4-921e-74b64e473f40)'
+    azureSubscription: 'java-app'
     appType: 'webApp'
     WebAppName: 'petclinic-webapplication'
     packageForLinux: '$(build.artifactstagingdirectory)/**/*.war'
